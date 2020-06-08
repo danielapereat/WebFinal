@@ -25,6 +25,7 @@ function showHideElement(){
 
 function changePassword(){
     alert ("Se ha guardado los cambios")
+    Ocultar();  
 }
 
 

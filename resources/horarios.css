@@ -197,15 +197,15 @@
 
 .o-location{
     width: 100%;
-    overflow: scroll;
+   
 }
 .o-location1{
     width: 100%;
-    overflow: scroll;
+    
 }
 .o-location2{
     width: 100%;
-    overflow: scroll;
+    
 }
 /* combo box de opciones */
 .o-comboBox-options-schedule{
@@ -291,7 +291,34 @@ table .empty {
 }
 table{
     width: 80%;
+    margin-top: 1.5rem;
 }
+/* Estilos al botón de reservar  */
+.o-buttonForm{
+    width: 20%;
+    margin: auto;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: #961a1d;
+    background-color: #ffffff;
+    border-color: #961a1d;
+    outline: none;
+}
+.o-buttonForm:hover, .o-buttonForm:focus, .o-buttonForm:disabled, .o-buttonForm:not(:disabled):not(.disabled).active, .o-buttonForm:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color:black;
+    border-color: black;
+    outline: none;
+    box-shadow: none;
+}
+
+.o-reserva{
+    width: 100px;
+    height: 88px;
+    background-color: #ffffff;
+    color:#ffffff;
+}
+
 /*Responsive*/
 @media screen and (max-width:1000px){
     /*Estilos del contenedor de links*/
@@ -310,6 +337,7 @@ table{
     }
       
 }
+
 
 /*Responsive*/
 @media screen and (max-width:500px){
@@ -346,4 +374,7 @@ table{
         margin: 5rem 0rem;
         width: 100%;
     }  
+    .o-buttonForm{
+        width: 50%;
+    }
 }

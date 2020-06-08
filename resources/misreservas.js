@@ -8,11 +8,14 @@ var sala=localStorage.getItem('6')
 window.onload=agregar;
 function deleteRow(btn) {
     row = btn.parentNode.parentNode;
+    confirm("¿Desea cancelar esta reserva?");
+    cancelar();
 }
 
 function cancelar(){
     row.parentNode.removeChild(row);
     localStorage.clear();
+
 }
 
 function agregar(){
@@ -25,7 +28,7 @@ function agregar(){
         '<td>'+sala+'</td>' +
         '<td>'+equipo+'</td>' +
         '<td>' + 
-        '<a type="button" href="#Inconsistency" data-toggle = "modal" target="_blank" class="btn btn-primary o-Button" id="loginbtn" onclick="deleteRow(this)">Cancelar</a>' +
+        '<button type="button"   class="btn btn-primary o-Button" id="loginbtn" onclick="deleteRow(this)">Cancelar</button>' +
         '<a  type="button" href="reservar.html" class="btn btn-primary o-Button" id="loginbtn"> Reprogramar</a>'
         '</td>';
     }

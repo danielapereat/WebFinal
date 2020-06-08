@@ -4,7 +4,10 @@ var horaInicio="";
 var equipo ="";
 var sala="Audio digital";
 var today = new Date();
+var sala1=localStorage.getItem('7');
+var select="";
 
+window.onload=verificar;
 function cambio(btn){
     equipo = btn.value;
     console.log(equipo)
@@ -42,7 +45,8 @@ function fecha(){
 
 
 function labOnChange(sel){
-    if(sel.value=="lab-audio"){
+    select=sel.value;
+    if(select=="lab-audio"){
         sala="Audio digital"
         info1 = document.getElementById("o-inforeserve");
         info1.style.display = "";
@@ -52,8 +56,9 @@ function labOnChange(sel){
 
         info3 = document.getElementById("o-inforeserve3");
         info3.style.display = "none";
+
     }
-    else if(sel.value=="lab-graph-one"){
+    else if(select=="lab-graph-one"){
         sala="Gráfica digital"
         info1 = document.getElementById("o-inforeserve");
         info1.style.display = "none";
@@ -64,7 +69,7 @@ function labOnChange(sel){
         info3 = document.getElementById("o-inforeserve3");
         info3.style.display = "none";
     }
-    else if(sel.value=="lab-video"){
+    else if(select=="lab-video"){
         sala="Video digital"
         info1 = document.getElementById("o-inforeserve");
         info1.style.display = "none";
@@ -86,5 +91,42 @@ function labOnChange(sel){
         info3 = document.getElementById("o-inforeserve3");
         info3.style.display = "none";
     }
+}
+
+function verificar(){
+    if(sala1 == "lab-audio"){
+        sala="Audio digital"
+        info1 = document.getElementById("o-inforeserve");
+        info1.style.display = "";
+
+        info2 = document.getElementById("o-inforeserve2");
+        info2.style.display = "none";
+
+        info3 = document.getElementById("o-inforeserve3");
+        info3.style.display = "none"; 
+        localStorage.clear();
+    } else if(sala1 == "lab-graph-one"){
+        sala="Gráfica digital"
+        info1 = document.getElementById("o-inforeserve");
+        info1.style.display = "none";
+
+        info2 = document.getElementById("o-inforeserve2");
+        info2.style.display = "";
+
+        info3 = document.getElementById("o-inforeserve3");
+        info3.style.display = "none";
+        localStorage.clear();
+    } else if(sala1 == "lab-video"){
+        sala="Video digital"
+        info1 = document.getElementById("o-inforeserve");
+        info1.style.display = "none";
+
+        info2 = document.getElementById("o-inforeserve2");
+        info2.style.display = "none";
+
+        info3 = document.getElementById("o-inforeserve3");
+        info3.style.display = "";
+        localStorage.clear();
+    }else{}
 }
 

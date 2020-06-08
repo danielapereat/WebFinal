@@ -406,11 +406,11 @@ td{
 }
 
 table .o-pcdisable {
-    background-color:  #000000;
+    background-color:  #961a1d;
     border: 1px solid white;
 }
 table .o-pcable {
-    background-color:  #961a1d;
+    background-color:  #000000;
     border: 1px solid white;
 }
 

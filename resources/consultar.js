@@ -1,3 +1,4 @@
+var sala="";
 function ProgOnChange(sel){
     if(sel.value=="adobe-photoshop"){
         info1 = document.getElementById("o-location");
@@ -39,4 +40,17 @@ function ProgOnChange(sel){
         info3 = document.getElementById("o-location2");
         info3.style.display = "none";
     }
+}
+
+function sala1(){
+    sala = document.getElementById("grafica1").getAttribute("value");
+    localStorage.setItem('7', sala);
+}
+function sala2(){
+    sala = document.getElementById("audio1").getAttribute("value");
+    localStorage.setItem('7', sala);
+}
+function sala3(){
+    sala = document.getElementById("video1").getAttribute("value");
+    localStorage.setItem('7', sala);
 }

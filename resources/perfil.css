@@ -9,6 +9,9 @@
     background-color: white;
     position:fixed;
 }
+.o-body{
+    background-color: #f4f4f4;
+}
 /*Estilos del contenedor de links*/
 .o-navbar{
     margin: 0rem 0rem 0rem 28rem;
