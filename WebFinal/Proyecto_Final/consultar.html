@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="resources/consultar.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/consultar.css" />
+</head>
+</head>
+<body class= "o-body">
+    <div class = "o-header sticky-top navbar">
+        <!--Contenedor del navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!--Contenedor del Logo de la pagina-->
+            <img class = "col-lg-3 o-logo" src="resources/logo.png" alt= "logo de la pagina">
+            <!--Boton de menú-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Contenedor de links del NavBar-->
+            <div class="col-lg-4 collapse navbar-collapse o-navbar" id="navbarTogglerDemo02">   
+                        <a class="col-lg-4 col-md-2 col-sm-1" href="inicio.html">Inicio</a>
+                        <a class="col-lg-6 col-md-3 col-sm-1" href="misreservas.html">Mis reservas</a> 
+                        <!--<a href="perfil.html">Configuracion</a>-->
+                        <div class="dropdown col-lg-8 col-md-5 col-sm-1">
+                            <button class="dropbtn">Configuración</button>
+                            <div class="dropdown-content">
+                              <a href="perfil.html">Editar Perfil</a>
+                              <a href="index.html">Cerrar sesión</a>
+                            </div>
+                        </div>
+            </div>
+            
+        </nav><!--Cierra contenedor del navbar-->    
+    </div><!--Cierra row del navbar-->
+
+    
+    <div class="container o-bodyContainer"> 
+        <div class="row">         
+            <h2 class= "o-title">Disponibilidad de software</h2>
+        </div> 
+        <hr id="hr-portfolio" class="o-hr">
+
+       <!-- Creación del buscador junto a su ícono -->
+       <div class="row o-options">
+        <!-- Primer columna para el seleccionar laboratorio -->
+        <div class="col-xs">
+            <h3 class="o-label-labs-schedule">Seleccione software</h3>
+        </div>
+        <!-- Opciones del select -->
+        <div class="col o-op"> 
+            <select name="labs" id="labs" class="o-comboBox-options-schedule" onChange="ProgOnChange(this)">            
+                <option value="adobe-photoshop">Adobe Photoshop</option>
+                <option value="adobe-illustrator">Adobe Illustrator</option>
+                <option value="adobe-xd">Adobe XD</option>
+            </select>
+        </div>
+    </div>
+
+
+    <!-- Creación de tabla para los resultados de la búsqueda -->
+        <tr>
+            <div class="o-location" id="o-location" style="display:;">
+                <div class="o-headerLocation">
+                    <div class="row">         
+                        <h2 class= "o-title-location">Adobe Photoshop</h2>
+                    </div>
+
+        <!-- Creación de tabla para los resultados de la búsqueda -->
+        <table class="table table-condensed o-schedule">
+            <tr>
+                <!-- Títulos de la tabla -->
+                <th>Versión</th>
+                <th>Sala</th>
+                <th>Horario</th>
+              </tr>
+              <tr>
+                  <!-- Resultados -->
+                <td>CS6 (13.0)</td>
+                <td>Gráfica digital 1</td>
+                <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+                </a>
+              </tr>
+              <tr>
+                <td>CC 2018 (19.0.0)</td>
+                <td>Gráfica digital 2</td>
+                <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+                </a>
+              </tr>
+              <tr>
+                <td>CC 2019 (20.0.8)</td>
+                <td>Gráfica digital 3</td>
+                <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+                </a>
+              </tr>
+        </table>
+    </table>
+    </div>
+</div> 
+        <div class="o-location1" id="o-location1" style="display:none">
+            <div class="o-headerLocation">
+                <div class="row">         
+                    <h2 class= "o-title-location">Adobe Illustrator</h2>
+                </div>
+
+    <!-- Creación de tabla para los resultados de la búsqueda -->
+    <table class="table table-condensed o-schedule">
+            <!-- Títulos de la tabla -->
+            <th>Versión</th>
+            <th>Sala</th>
+            <th>Horario</th>
+          </tr>
+          <tr>
+              <!-- Resultados -->
+            <td>CS6 (3.0)</td>
+            <td>Animal Lab</td>
+            <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+            </a>
+          </tr>
+          <tr>
+            <td>CC 2018 (9.2.0)</td>
+            <td>Gráfica digital 1</td>
+            <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+            </a>
+          </tr>
+          <tr>
+            <td>CC 2019 (4.8.8)</td>
+            <td>Video Lab</td>
+            <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+            </a>
+          </tr>
+    </table>
+</table>
+</div>
+</div>
+
+        <div class="o-location2" id="o-location2" style="display:none">
+            <div class="o-headerLocation">
+                <div class="row">         
+                    <h2 class= "o-title-location">Adobe XD</h2>
+                </div>
+
+    <!-- Creación de tabla para los resultados de la búsqueda -->
+    <table class="o-table-program">
+    <table class="table table-condensed o-schedule">
+        <tr>
+            <!-- Títulos de la tabla -->
+            <th>Versión</th>
+            <th>Sala</th>
+            <th>Horario</th>
+          </tr>
+          <tr>
+              <!-- Resultados -->
+            <td>CS6 (6.0)</td>
+            <td>Video Lab</td>
+            <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+            </a>
+          </tr>
+          <tr>
+            <td>CC 2018 (8.0.0)</td>
+            <td>Gráfica digital 2</td>
+            <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+            </a>
+          </tr>
+          <tr>
+            <td>CC 2019 (5.0.8)</td>
+            <td>Gráfica digital 3</td>
+            <td class= "o-imghorariotabla"><a href="horarios.html"><img class="o-imgHorario" src="resources/horario.png" alt="Horario"></td>
+            </a>
+          </tr>
+    </table>
+</table>
+</div>
+</div>
+</div>
+
+    <!-- Empieza el codigo del footer NO TOCAR -->
+    <div class = "row footer o-footer">
+        <div class="container o-containerFooter">
+            <div class = "col">
+                <img class = "o-logoFooter" src="resources/UAO_dark.png" alt= "logo de la pagina">
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Personería jurídica, Res. No. 0618, de la Gobernación del Valle del Cauca, del 20 de febrero de 1970.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Universidad Autónoma de Occidente, Res. No. 2766, del Ministerio de Educación Nacional, del 13 de noviembre de 2003.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Acreditación Institucional de Alta Calidad, Res. No. 16740, del 24 de agosto de 2017, con vigencia hasta el 2021.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Universidad Vigilada MinEducación
+                </p>
+            </div>
+        </div>        
+    </div>
+
+
+
+    <!-- Termina el codigo del footer NO TOCAR -->
+        
+    
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

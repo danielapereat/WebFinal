@@ -1,0 +1,375 @@
+/*ESTILOS DE LA PAGINA*/
+html {
+    line-height: 0rem;
+    margin: 0rem;
+    
+}
+.o-body{
+    background-color: #f4f4f4;
+    margin: 0rem;
+}
+
+/*ESTILOS DEL NAVBAR*/
+/*Estilos del Navbar*/
+.o-header{
+    min-width: 100%;
+    box-shadow: 0px 0px 10px 0px #d1d1d1;
+    align-items: center;
+    padding: 0rem 6rem;
+    margin: 0rem;
+    justify-content: space-between;
+    background-color: white;
+    position:fixed;
+}
+/*Estilos del contenedor de links*/
+.o-navbar{
+    margin: 0rem 0rem 0rem 28rem;
+    justify-content: space-around;
+}
+/*Estilos del logo del Navbar*/
+.o-logo{
+    width: 20%;
+}
+/*Estilos de los links del NavBar*/
+.o-header a {
+    float: left;
+    display: flex;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+}
+.o-header a:after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	background-color: #9e0b0f;
+	width: 0;
+	left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  	transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+.o-header a:hover{
+	color: #9e0b0f;
+}
+.o-header a:hover:after {
+	width: 100%;
+}
+/*ESTILOS DEL DROPDOWN DEL NAVBAR*/
+/*Estilos del boton dropdown*/
+.dropbtn {
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border: none;
+    background-color: white;
+}
+.dropbtn:after{
+    content: "";
+	position: absolute;
+	height: 2px;
+	background-color: #9e0b0f;
+	width: 0;
+	left: 50%;
+	bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+.dropbtn:hover{
+    color: #9e0b0f;
+}
+.dropbtn:hover:after{
+    width: 100%;
+}
+ 
+/*Contenedor del dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0rem;
+    margin: 0rem;
+} 
+/*Contenido del dropdown*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+/* Links dentro del dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/*dropdown links cuando hay hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+  
+/*Mostrar el contenido del dropdown cuando hay hover*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+/*Color del boton cuando hay hover*/
+.dropdown:hover .dropbtn {
+   background-color: #9e0b1000;
+}
+
+/*ESTILOS DEL BODY*/
+/*Estilos del contendor del body*/
+.o-bodyContainer{
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 7rem 8rem 2rem 8rem;
+    width: 81%;
+    
+}
+/*Estilos de la barra de separacion*/
+.o-hr{
+    border: 1px solid #961a1d;
+    width: 100%;
+    margin: 0em 0 2rem 0;
+}
+
+/*Estilo del titulo de la pagina*/
+.o-title{
+    font-family: 'Montserrat';
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0rem 0rem 1rem 0rem;
+    color: #000000;
+}
+
+
+/*TABLA*/
+ /*Contenedor de la tabla*/
+ .o-ubication{
+    width:100%;
+    overflow-x:scroll;
+}
+/* alineacion y ancho de la tabla  */
+.o-schedule{
+    width: 100%;
+    text-align: left;
+ }
+ /*Estilo del boton de la tabla*/
+.o-Button{
+    margin: 0.5rem 0rem;
+    min-width: 4rem;
+    padding: 0 0;
+    border-radius: 30px;
+    background: #fff;
+    display: inline-block;
+    font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    color: #961a1d;
+    border: 2px solid #961a1d;
+    font-weight: 700;
+    line-height: 1.5;
+    box-shadow: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0rem 0.5rem;
+
+}
+.o-Button:hover, .o-Button:focus, .o-Button:disabled, .o-Button:not(:disabled):not(.disabled).active, .o-Button:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color:#961a1d;
+    border-color: #961a1d;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+/* estilos de la tabla */
+table{
+    width: 80%;
+}
+th{ 
+    font-family: 'Montserrat';
+    font-weight: 80px;
+    background-color:  #631213;
+    color: #ffffff;
+    font-size: 14px;
+    border: 1px solid#000000;
+    padding: 1rem;
+    text-align: center;
+}
+td{ 
+    font-family: 'Montserrat';
+    text-align: center;
+    font-weight: 410;
+    color: #000000;
+    font-size: 14px;
+    background-color:  #ffffff;
+    border: 1px solid rgb(107, 107, 107);
+    padding: 1rem;
+}
+/*POP UP*/
+/*Titulo del pop up*/
+.o-text1{
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    text-align: center;
+    color: #631213; 
+   
+}
+/*Informacion del pop up*/
+.o-textinconsistency{
+    font-size: 15px;
+    font-family: 'Montserrat';
+    color: #666666;
+    margin-bottom: 0;
+}
+/*Boton continuar del pop up*/
+.o-buttonsave{
+    font-size: 15px;
+    font-family: 'Montserrat';
+    background-color: #961a1d;
+    border-color: #961a1d;
+    color: #fff;
+}
+.o-buttonsave:hover,  .o-buttonsave:focus, .o-buttonsave:disabled, .o-buttonsave:not(:disabled):not(.disabled).active, .o-buttonsave:not(:disabled):not(.disabled):active  {
+    color: #fff;
+    background-color:black;
+    border-color: black;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+/*Boton cerrar del pop up*/
+.o-buttonclose{
+    font-size: 15px;
+    font-family: 'Montserrat';
+    border:1px solid #961a1d;
+    background-color: white;
+    color: #961a1d;
+}
+.o-buttonclose:hover,  .o-buttonclose:focus, .o-buttonclose:disabled, .o-buttonclose:not(:disabled):not(.disabled).active, .o-buttonclose:not(:disabled):not(.disabled):active {
+    color: black;
+    background-color: #cccccc;
+    border-color: #cccccc;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+/*ESTILOS DEL FOOTER DE LA PAGINA*/
+/*Contendeor del footer*/
+.o-footer{
+    min-width: 4rem;
+    box-shadow: 0px 0px 10px 2px #d1d1d1;
+    align-items: center;
+    padding: 0rem;
+    justify-content: space-between;
+    background-color: #000000;
+}
+.o-containerFooter{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+/*Logo intitucional del footer*/
+.o-logoFooter{
+    width: 100%;
+    margin: 3rem 0rem 1rem 0rem;
+}
+/*Texto del footer*/
+.o-textFooter{
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-size: .9rem;
+    margin: 3rem 0rem 3rem 0rem;
+    color: white;
+}
+
+/*Responsive*/
+@media screen and (max-width:1000px){
+    /*Estilos del contenedor de links*/
+    .o-navbar{
+        margin: 0rem;
+    }
+    /*Estilos de la marca*/
+    .o-brand{
+        width: 20%;
+        margin: 0rem;
+        height: 3rem;
+    }
+
+    .o-header{
+        padding: 0rem 1rem;
+    }
+      
+}
+
+/*Responsive*/
+@media screen and (max-width:500px){
+    /*Estilos del contenedor de links*/
+    .o-navbar{
+        margin: 0rem;
+    }
+    /*Estilos de la marca*/
+    .o-brand{
+        width: 40%;
+        margin: 0rem;
+        height: 3rem;
+    }
+    .o-header{
+        padding: 0rem 1rem;
+    }
+    .o-containerFooter{
+        display: none;
+    }
+    .o-logo{
+        width: 50%;
+    }
+    table {
+        overflow-x: 90%;
+        width: 100%;
+        margin: 1rem;
+        padding: 1rem;
+      }
+    .o-header a{
+        justify-content: flex-start;
+    }
+    .o-bodyContainer{
+        padding: 0.5rem;
+        margin: 5rem 0rem;
+        width: 100%;
+    }  
+}

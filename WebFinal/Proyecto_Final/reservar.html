@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/reservar.css" />
+    <script src="resources/misreservas.js"></script>
+    <script src="resources/reservar.js"></script>
+</head>
+<body class= "o-body">
+    <!-- Empieza el codigo del navbar NO TOCAR -->
+    html del navbar
+<div class = "o-header sticky-top navbar">
+        <!--Contenedor del navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!--Contenedor del Logo de la pagina-->
+            <img class = "col-lg-3 o-logo" src="resources/logo.png" alt= "logo de la pagina">
+            <!--Boton de menú-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Contenedor de links del NavBar-->
+            <div class="col-lg-4 collapse navbar-collapse o-navbar" id="navbarTogglerDemo02">   
+                        <a class="col-lg-4 col-md-2 col-sm-1" href="inicio.html">Inicio</a>
+                        <a class="col-lg-6 col-md-3 col-sm-1" href="misreservas.html">Mis reservas</a> 
+                        <!--<a href="perfil.html">Configuracion</a>-->
+                        <div class="dropdown col-lg-8 col-md-5 col-sm-1">
+                            <button class="dropbtn">Configuración</button>
+                            <div class="dropdown-content">
+                              <a href="perfil.html">Editar Perfil</a>
+                              <a href="index.html">Cerrar sesión</a>
+                            </div>
+                        </div>
+            </div>
+            
+        </nav><!--Cierra contenedor del navbar-->    
+    </div><!--Cierra row del navbar-->
+
+    
+    <div class="container o-bodyContainerReserve"> 
+        <!-- Título de la interfaz y separador -->
+        <div class="row">         
+            <h2 class= "o-title">Reserva de equipo</h2>
+        </div> 
+        <hr id="hr-portfolio" class="o-hr">
+
+        <!-- Creación del combobox con las salas -->
+        <div class="row">
+            <div class="col-xs">
+                <h3 class="o-label-labs">Seleccione laboratorio</h3>
+            </div>
+            <div class="col"> 
+                <select name="lab" id="lab" onChange="labOnChange(this)" class="o-comboBox-options-reserve">
+                    <option value="lab-audio">AUDIO DIGITAL</option>
+                    <option value="lab-graph-one">GRÁFICA DIGITAL</option>
+                    <option value="lab-video">VIDEO DIGITAL</option>
+                </select>
+            </div>
+        </div>
+    </br>
+        <!-- Ubicación de equipos de respectiva sala y disponibilidad -->
+    <div class="o-inforeserve2" id="o-inforeserve" style="display:;">
+        <div class="row">         
+            <h2 class= "o-title-location-pc">Audio digital</h2>
+        </div>
+        
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°1</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios1" value="N°1" onchange="cambio(this)" checked>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°2</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios2" value="N°2" onchange="cambio(this)">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°3</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios3" value="N°3" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°4</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios5" value="N°4" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°5</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios6" value="N°5" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°6</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios7" value="N°6" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°7</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios8" value="N°7" onchange="cambio(this)">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°8</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios9" value="N°8" onchange="cambio(this)">
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°9</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios11" value="N°9" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°10</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios12" value="N°10" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°11</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios13" value="N°11" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°12</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios14" value="N°12" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°13</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios15" value="N°13" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°14</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios17" value="N°14" onchange="cambio(this)" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°15</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios18"value="N°15" onchange="cambio(this)">
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°16</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios19"value="N°16" onchange="cambio(this)">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°17</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios20" value="N°17" onchange="cambio(this)">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°18</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios21" value="N°18" onchange="cambio(this)">
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°19</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios22" value="N°19" onchange="cambio(this)">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°20</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios23" value="N°20" onchange="cambio(this)">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <table class="table table-condensed o-details">
+                <tr>
+                    <td class="o-pcdisable"></th>
+                    <td class="o-pcstatus-label">Equipo ocupado</th>
+                </tr>
+                <tr>
+                    <td class="o-pcable"></th>
+                    <td class="o-pcstatus-label">Equipo disponible</td>
+                </tr>
+            </table>
+
+            
+        </div>
+    
+    </div>
+
+
+    <div class="o-inforeserve2" id="o-inforeserve2" style="display:none">
+        <div class="row">         
+            <h2 class= "o-title-location-pc">Gráfica digital</h2>
+        </div>
+        
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°1</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios11" value="option11" disabled>
+                </div>
+            </div>
+            <div class="col  o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°2</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios21" value="option21" checked>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°3</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios31" value="option31">
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°4</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios51" value="option51" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°5</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios61" value="option61" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°6</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios71" value="option71" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°7</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios81" value="option81">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°8</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios91" value="option91" disabled>
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°9</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios111" value="option111" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°10</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios121" value="option121" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°11</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios131" value="option131" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°12</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios141" value="option141">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°13</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios151" value="option151">
+                </div>
+            </div>
+            <div class="col o-emptyspace  o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°14</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios171" value="option171" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°15</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios181" value="option181">
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°16</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios191" value="option191">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°17</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios201" value="option201">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°18</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios211" value="option211">
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°19</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios221" value="option221">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°20</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios231" value="option231" disabled>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <table class="table table-condensed o-details">
+                <tr>
+                    <td class="o-pcdisable"></th>
+                    <td class="o-pcstatus-label">Equipo ocupado</th>
+                    
+                </tr>
+                <tr>
+                    <td class="o-pcable"></th>
+                    <td class="o-pcstatus-label">Equipo disponible</td>
+                </tr>
+            </table>        
+        </div>
+    </div>
+
+    <div class="o-inforeserve3" id="o-inforeserve3" style="display:none">
+        <div class="row">         
+            <h2 class= "o-title-location-pc">Video digital</h2>
+        </div>
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°1</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios12" value="option12" checked>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°2</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios22" value="option22">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°3</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios32" value="option32">
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°4</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios52" value="option52">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°5</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios62" value="option62">
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°6</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios72" value="option72" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°7</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios82" value="option82">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°8</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios92" value="option92">
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°9</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios112" value="option112">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°10</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios122" value="option122">
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°11</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios132" value="option132" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°12</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios142" value="option142" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°13</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios152" value="option152" disabled>
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°14</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios172" value="option172" disabled>
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°15</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios182" value="option182" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="row o-tablerow">
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°16</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios192" value="option192">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°17</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios202" value="option202">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°18</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios212" value="option212">
+                </div>
+            </div>
+            <div class="col o-emptyspace o-colC">
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-able.png">
+                <div class="form-check o-computer2">
+                    <p>N°19</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios222" value="option222">
+                </div>
+            </div>
+            <div class="col o-colC">
+                <img class = "o-computer" src="resources/pcs-disable.png">
+                <div class="form-check o-computer2">
+                    <p>N°20</p>
+                    <input class="custom-control custom-radio" type="radio" name="Radios" id="Radios232" value="option232">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-condensed o-details">
+                <tr>
+                    <td class="o-pcdisable"></th>
+                    <td class="o-pcstatus-label">Equipo ocupado</th>
+                    
+                </tr>
+                <tr>
+                    <td class="o-pcable"></th>
+                    <td class="o-pcstatus-label">Equipo disponible</td>
+                </tr>
+            </table>        
+        </div>
+    </div>
+
+    <div>
+        <!-- DatePickers para el inicio y final de la reserva del equipo -->
+        <div class="row ">
+            <div class="col-xl-7 o-card-datePicker">
+                <div class="form-group o-form">
+                    <div class="o-label-datepickerContainer">
+                        <h3 class="o-label-datepicker">Fecha</h3>
+                    </div>
+                    <div class="input-group o-dateGroup">
+                            <input class="form-control datePicker o-formInput o-formFont" id="datePicker" name="datePicker" type="date" value="" placeholder="Inicio de reserva" onclick="fecha(this)"/>
+                    </div>
+                </div>
+                <div class="o-lpmqlp">
+                    <div class="o-label-datepickerContainer">
+                        <h3 class="o-label-datepicker">Hora de inicio</h3>
+                        <input class="form-control datePicker o-formInput o-formFont" id="datePicker2" name="datePicker" type="time" value="" placeholder="Inicio de reserva"/>
+                    </div>
+                    <div class="o-label-datepickerContainer">
+                        <h3 class="o-label-datepicker">Hora de fin</h3>
+                        <input class="form-control datePicker o-formInput o-formFont" id="datePicker3" name="datePicker" type="time" value="" placeholder="Inicio de reserva"/>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Botón realizar reserva -->
+        
+        <div class="row o-reservebtn">
+            <button type="submit" class="btn btn-primary o-buttonForm" id="reservebtn" onclick="saveReserve()">Reservar</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Empieza el codigo del footer NO TOCAR -->
+    <div class = "row footer o-footer">
+        <div class="container o-containerFooter">
+            <div class = "col">
+                <img class = "o-logoFooter" src="resources/UAO_dark.png" alt= "logo de la pagina">
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Personería jurídica, Res. No. 0618, de la Gobernación del Valle del Cauca, del 20 de febrero de 1970.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Universidad Autónoma de Occidente, Res. No. 2766, del Ministerio de Educación Nacional, del 13 de noviembre de 2003.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Acreditación Institucional de Alta Calidad, Res. No. 16740, del 24 de agosto de 2017, con vigencia hasta el 2021.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Universidad Vigilada MinEducación
+                </p>
+            </div>
+        </div>        
+    </div>
+    <!-- Termina el codigo del footer NO TOCAR -->
+        
+    
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

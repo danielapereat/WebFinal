@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="resources/perfil.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/perfil.css" />
+</head>
+</head>
+<body class= "o-body">
+    <div class = "o-header sticky-top navbar">
+        <!--Contenedor del navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!--Contenedor del Logo de la pagina-->
+            <img class = "col-lg-3 o-logo" src="resources/logo.png" alt= "logo de la pagina">
+            <!--Boton de menú-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Contenedor de links del NavBar-->
+            <div class="col-lg-4 collapse navbar-collapse o-navbar" id="navbarTogglerDemo02">   
+                        <a class="col-lg-4 col-md-2 col-sm-1" href="inicio.html">Inicio</a>
+                        <a class="col-lg-6 col-md-3 col-sm-1" href="misreservas.html">Mis reservas</a> 
+                        <!--<a href="perfil.html">Configuracion</a>-->
+                        <div class="dropdown col-lg-8 col-md-5 col-sm-1">
+                            <button class="dropbtn">Configuración</button>
+                            <div class="dropdown-content">
+                              <a href="perfil.html">Editar Perfil</a>
+                              <a href="index.html">Cerrar sesión</a>
+                            </div>
+                        </div>
+            </div>
+            
+        </nav><!--Cierra contenedor del navbar-->    
+    </div><!--Cierra row del navbar-->
+
+    
+    <div class="container o-bodyContainerProfile"> 
+        <!-- Este es el codigo del titulo de cada interfaz, solo cambien el nombre del titulo -->
+        <div class="row o-profileContainer">         
+            <h2 class= "o-title">Perfil</h2>
+        </div> 
+        <hr id="hr-portfolio" class="o-hr">
+        <div class="row">
+            <div class="col o-items">
+                <h3 class="o-font-items">Nombre (s) </h3>
+                <h3 class="o-font-items">Apellido (s) </h3>
+                <h3 class="o-font-items">Código</h3>
+                <h3 class="o-font-items">Usuario</h3>
+                <h3 class="o-font-items">Correo</h3>
+            </div>
+            <div class="col">
+                <input disabled class="o-textbox" type="text" id="name" name="o-font-items" value="Daniela">
+                <input disabled class="o-textbox" type="text" id="lastname" name="o-font-items" value="Perea">
+                <input disabled class="o-textbox" type="text" id="id-codigo" name="o-font-items"value="2160923">
+                <input disabled class="o-textbox" type="text" id="user" name="o-font-items"value="daniela.perea">
+                <input disabled class="o-textbox" type="text" id="email" name="o-font-items"value="daniela.perea@uao.edu.co">
+            </div>
+            <div class="col">
+                <img class="o-imgProfile2" src="resources/avataaars.png" alt="Foto de perfil del usuario">  
+                <img class="o-imgEditProfile" src="resources/edit-tools-01.png" alt="Editar Foto">    
+            </div>
+        </div>
+                <div class= "o-inconsistency">
+                    <div class="o-subtitle">
+                    <a href="#Inconsistency" data-toggle = "modal" target="_blank" class="o-text1">Reportar Inconsistencia</a>
+                    </div>
+                    <div class="modal fade" id="Inconsistency">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <!--Header modal-->
+                                <div class="modal-header">
+                                    <h2 class="modal-title o-text">Reportar Inconsistencia</h2>
+                                    <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                            <!--Contenido modal-->
+                                 <div class="modal-body">
+                                    <p class="o-textinconsistency"> Edite los campos que se encuentran erroneos </p>
+                                    <div class="o-dat">
+                                    <input class="o-textboxInconsistency" type="text" id="name" name="o-font-items" value="Daniela">
+                                    <input class="o-textboxInconsistency" type="text" id="lastname" name="o-font-items" value="Perea">
+                                    <input class="o-textboxInconsistency" type="text" id="id-codigo" name="o-font-items"value="2160923">
+                                    <input class="o-textboxInconsistency" type="text" id="user" name="o-font-items"value="daniela.perea">
+                                    <input class="o-textboxInconsistency" type="text" id="email" name="o-font-items"value="daniela.perea@uao.edu.co">
+                                    </div>
+                                    <div class="o-warnings">
+                                        <img class="o-imgWarning" src="resources/warning-01.png" alt="ícono de warning">
+                                    <p class = "o-textinconsistency">Los cambios deben ser aprobados por registro academico antes de ser visibles en el perfil</p>
+                                    </div>
+                                </div>
+                            <!--Footer modal-->   
+                            <div class="modal-footer">
+                                <button type = "button" class="btn btn-default o-buttonclose" data-dismiss="modal">Cerrar</button>
+                                <button type = "button" class="btn o-buttonsave"data-dismiss="modal" onclick="feedbackSave()">Guardar Cambios</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        
+                <div class="row o-passwordContainer">         
+                    <div class="col-sm-4 o-items">
+                        <button type="submit" class="btn btn-primary o-buttonForm o-buttonPassword" id="passwordB" onclick="showHideElement()">Cambiar contraseña</button>
+                    </div>
+                </div>
+               <div class="row" id = "Password">
+                <div class = "o-pCont">
+                <div class="col-sm-4 o-items">
+                    <h3 class="o-font-items">Contraseña actual</h3>
+                    <h3 class="o-font-items">Contraseña nueva</h3>
+                    <h3 class="o-font-items">Confirmar contraseña</h3>
+                    <div class="o-buttonSaveChangePassword">
+                        <button type="submit" class="btn btn-primary o-buttonForm o-buttonChange" id="changePassword" onclick="changePassword()">Guardar Cambios</button>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <input type="password" name="actualPassword" id="actualPassword" value="" class="form-control login-password o-passwordInput" placeholder="">
+                    <input type="password" name="newPassword" id="newPassword" value="" class="form-control login-password o-passwordInput" placeholder="">
+                    <input type="password" name="confirmPassword" id="confirmPassword" value="" class="form-control login-password o-passwordInput" placeholder="">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Empieza el codigo del footer NO TOCAR -->
+    <div class = "row footer o-footer">
+        <div class="container o-containerFooter">
+            <div class = "col">
+                <img class = "o-logoFooter" src="resources/UAO_dark.png" alt= "logo de la pagina">
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Personería jurídica, Res. No. 0618, de la Gobernación del Valle del Cauca, del 20 de febrero de 1970.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Universidad Autónoma de Occidente, Res. No. 2766, del Ministerio de Educación Nacional, del 13 de noviembre de 2003.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Acreditación Institucional de Alta Calidad, Res. No. 16740, del 24 de agosto de 2017, con vigencia hasta el 2021.
+                </p>
+            </div>
+            <div class = "col">
+                <p class="o-textFooter">
+                    Universidad Vigilada MinEducación
+                </p>
+            </div>
+        </div>        
+    </div>
+    <!-- Termina el codigo del footer NO TOCAR -->
+        
+    
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
