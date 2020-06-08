@@ -1,0 +1,500 @@
+/*ESTILOS DE LA PAGINA*/
+html{
+    line-height: 0rem;
+    margin: 0rem;
+    
+}
+.o-body{
+    background-color: #f4f4f4;
+    margin: 0rem;
+}
+
+/*ESTILOS DEL NAVBAR*/
+
+/*Estilos del Navbar*/
+.o-header{
+    min-width: 100%;
+    box-shadow: 0px 0px 10px 0px #d1d1d1;
+    align-items: center;
+    padding: 0rem 6rem;
+    margin: 0rem;
+    justify-content: space-between;
+    background-color: white;
+    position:fixed;
+}
+/*Estilos del contenedor de links*/
+.o-navbar{
+    margin: 0rem 0rem 0rem 28rem;
+    justify-content: space-around;
+}
+/*Estilos del logo del Navbar*/
+.o-logo{
+    width: 20%;
+}
+/*Estilos de los links del NavBar*/
+.o-header a {
+    float: left;
+    display: flex;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+}
+.o-header a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #9e0b0f;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+.o-header a:hover{
+    color: #9e0b0f;
+}
+.o-header a:hover:after {
+    width: 100%;
+}
+/*ESTILOS DEL DROPDOWN DEL NAVBAR*/
+/*Estilos del boton dropdown*/
+.dropbtn {
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border: none;
+    background-color: white;
+}
+.dropbtn:after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #9e0b0f;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+.dropbtn:hover{
+    color: #9e0b0f;
+}
+.dropbtn:hover:after{
+    width: 100%;
+}
+ 
+/*Contenedor del dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0rem;
+    margin: 0rem;
+} 
+/*Contenido del dropdown*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+/* Links dentro del dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/*dropdown links cuando hay hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+  
+/*Mostrar el contenido del dropdown cuando hay hover*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+/*Color del boton cuando hay hover*/
+.dropdown:hover .dropbtn {
+   background-color: #9e0b1000;
+}
+
+/* Estilos al contenedor de la reserva  */
+.o-bodyContainerReserve{
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 5.5rem 8rem 2rem 8rem;
+    width: 81%;
+}
+
+/* Estilos al separador  */
+.o-hr{
+    border: 1px solid #9e0b0f;
+    width: 100%;
+    margin: 0em 0 2rem 0;
+}
+
+/* Estilos al título de la interfaz  */
+.o-title{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin: 1rem 0rem 2rem 0rem;
+    color: #000000;
+}
+.o-imgCard{
+    width: 100%;
+    height: 70%;
+    
+}
+
+/* Estilos al contenedor de los datePickers  */
+.o-card{
+    margin: 1rem 0rem;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px #888888;
+    border-radius: 10px;
+    padding: 0rem 0rem 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.o-title2{
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 1rem 1rem 5rem 1rem;
+    color: #000000;
+}
+a, a:hover, a:active{
+    color: #000;
+    border-bottom: 1px;
+    outline: none;
+    box-shadow: none;
+}
+/* Estilos a la clase footer  */
+.o-footer{
+    min-width: 4rem;
+    box-shadow: 0px 0px 10px 2px #d1d1d1;
+    align-items: center;
+    padding: 0rem;
+    justify-content: space-between;
+    background-color: #000000;
+}
+/* Estilos al logo del footer  */
+.o-logoFooter{
+    width: 100%;
+    margin: 3rem 0rem 1rem 0rem;
+}
+/* Estilos al texto del footer  */
+.o-textFooter{
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-size: .9rem;
+    margin: 3rem 0rem 3rem 0rem;
+    color: white;
+}
+/* Estilos al contenedor del footer  */
+.o-containerFooter{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* Estilos al contenedor de los combobox de las opciones de las salas  */
+.o-comboBox-options-reserve{
+    background: rgb(255, 255, 255);
+    border: 2px solid #665f602f;
+    margin: 1.3rem 0.1rem 0.5rem ;
+    padding: 0.2rem;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 100px;
+    color: #666666;  
+}
+/* Estilos al texto de los combobox de las opciones de las salas  */
+.o-label-labs{
+    font-family: 'Montserrat';
+    font-weight: 100px;
+    color: #666666;
+    font-size: 15px;
+    margin: 1.6rem;
+    padding: 0.2rem;
+}
+
+/* Estilos a la imagen de la ubicación de equipos de X sala  */
+.o-computer{
+    width: 40%;
+    margin: auto;
+    align-self: center;
+}
+.o-emptyspace{
+    background-color: white;
+}
+.form-check{
+    margin: 0.5rem 19%;
+}
+.o-reservebtn{
+    justify-content: center;
+}
+/* Estilos al botón de reservar  */
+.o-buttonForm{
+    width: 50%;
+    margin: 2rem 0rem 2rem 0rem;
+    font-family: 'Montserrat';
+    background-color: #961a1d;
+    border-color: #961a1d;
+    outline: none;
+}
+.o-buttonForm:hover, .o-buttonForm:focus, .o-buttonForm:disabled, .o-buttonForm:not(:disabled):not(.disabled).active, .o-buttonForm:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color:black;
+    border-color: black;
+    outline: none;
+    box-shadow: none;
+}
+.o-label-date{
+    font-family: 'Montserrat';
+    font-weight: 100px;
+    color: #666666;
+    font-size: 15px;
+    margin: 1.6rem;
+    padding: 0.2rem;
+}
+/* Estilos al contenedor de los datePicker  */
+.o-form{
+    width: 276px;
+    flex-direction: column;
+}
+.o-lpmqlp{
+    width: 552px;
+    display: flex;
+    flex-direction: row;
+}
+.o-dateGroup{
+    margin: 1rem 0rem 1rem 0rem;
+    align-content: center;
+}
+.o-addon{
+    display: flex; 
+    align-items: center; 
+    border-bottom: 1px solid #961a1d; 
+    background-color:white;
+    width: 10%;
+}
+/* Estilos al ícono del datePicker  */
+.o-icondatePicker{
+    width: 50%;
+}
+.o-label-datepickerContainer{
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    margin: 1rem;
+}
+.o-label-datepicker{
+    font-family: 'Montserrat';
+    font-weight: 100px;
+    color: #666666;
+    font-size: 15px;
+    margin: 1.5rem;
+    align-self: center;
+}
+/* Estilos al contenedor de los datePicker  */
+.o-formInput{
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #961a1d;
+    outline: none;
+    width: 100%;
+}
+.o-formFont{
+    font-family: 'Montserrat';
+    color: #666666;
+}
+
+.o-computer2{
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+    padding: 0rem;
+    align-items: center;
+}
+p{
+    margin: 0.5rem 0rem 0rem 0rem;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: #000;
+}
+.o-tablerow{
+    margin: 1rem 0rem;
+}
+
+/* Estilos a la clase que contiene a los datePicker  */
+.o-card-datePicker{   
+    margin: auto;
+    width: 100%;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.o-title-location-pc{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 1rem auto 2rem auto;
+    color: #000000;
+}
+
+   .o-details{
+    width: 20%;
+    height: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    border: 1px solid white;
+}
+
+.tableContainer{
+    text-align: center;
+    border: 1px solid white;
+}
+table{
+    border: 1px solid white;
+    overflow: scroll;
+}
+
+th{
+    border: 1px solid white;
+}
+
+td{ 
+    font-family: 'Montserrat';
+    font-weight: 410;
+    color: #666666;
+    font-size: 14px;
+    border: 1px solid white;
+}
+
+table .o-pcdisable {
+    background-color:  #000000;
+    border: 1px solid white;
+}
+table .o-pcable {
+    background-color:  #961a1d;
+    border: 1px solid white;
+}
+
+.o-inforeserve{
+    width: 100%;
+    overflow-x: scroll;
+}
+.o-colC{
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+    padding: 0rem;
+    align-items: center;
+}
+
+/*Responsive*/
+@media screen and (max-width: 700px){
+    /*Estilos del contenedor de links*/
+    .o-navbar{
+        margin: 0rem;
+    }
+    /*Estilos de la marca*/
+    .o-brand{
+        width: 20%;
+        margin: 0rem;
+        height: 3rem;
+    }
+
+    .o-header{
+        padding: 0rem 1rem;
+    }
+      
+}
+
+/*Responsive*/
+@media screen and (max-width:500px){
+    /*Estilos del contenedor de links*/
+    .o-navbar{
+        margin: 0rem;
+    }
+    /*Estilos de la marca*/
+    .o-brand{
+        width: 40%;
+        margin: 0rem;
+        height: 3rem;
+    }
+    .o-header{
+        padding: 0rem 1rem;
+    }
+    .o-containerFooter{
+        display: none;
+    }
+    .o-logo{
+        width: 50%;
+    }
+    table {
+        overflow-x: 90%;
+        width: 100%;
+        margin: 1rem;
+        padding: 1rem;
+      }
+    .o-header a{
+        justify-content: flex-start;
+    }
+    .o-bodyContainerReserve{
+        padding: 0.5rem;
+        margin: 5rem 0rem;
+        width: 100%;
+        width:100%;
+    }  
+    .o-buttonForm{
+        width: 60%;
+        margin: 3rem 0rem 3rem 0rem;
+        
+    }
+    .o-lpmqlp{
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+    }
+    .o-label-datepickerContainer{
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        margin: 0rem;
+    }
+}
