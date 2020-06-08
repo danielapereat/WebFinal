@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/main.css" />
+    <script src="resources/index.js"></script>
+    
+</head>
+<body class= "o-body">
+        <!--Contenedor del contenido de la pagina-->
+        <div class="container o-container">
+          <!--Contenedor de la card-->
+            <div class="row o-cardRow">
+              <!--Contenido de la card-->
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11 col-10 o-card">
+                  <!--Logo-->
+                    <img class="o-logo" src="resources/logo.png" alt="Logo de la pagina">
+                    <!--Contenedor del formulario-->
+                      <div class="form-group o-form">
+                        <!--Contenedor del nombre de usuario-->
+                        <div class="input-group o-usernameGroup">
+                          <div class="input-group-addon o-addon">
+                            <img class="o-iconoUsuario" src="resources/userIcon-01.svg" alt="icono de usaurio">
+                          </div>
+                          <input class="form-control login-username o-formInput o-formFont" id="username" name="username" type="text" value="" placeholder="Nombre de usuario"/>
+                        </div><!--Cierra contenedor del nombre de usuario-->
+                        <!--Contenedor de la contraseña-->
+                        <div class="input-group">
+                            <div class="input-group-addon o-addon">
+                              <img class="o-iconoUsuario" src="resources/key-01.svg" alt="icono de contraseña">
+                            </div>
+                            <input type="password" name="password" id="password" value="" class="form-control login-password o-formFont o-formInput" placeholder="Contraseña">
+                          </div> <!--Cierra contenedor de la contraseña-->
+                        </div><!--Cierre contenedor del formulario-->
+                        <!--Boton de inicio de sesiòn-->
+                        <button type="button" class="btn btn-primary o-buttonForm" onclick="Login()" id="loginbtn"> Acceder</button>
+                        <!--Boton "olvide mi usuario o contraseña"-->
+                        <a class ="o-formFont" href="">¿Olvidó su nombre de usuario o contraseña?</a> 
+                        <!--Contenedor "recordar mis datos"-->
+                        <div class="input-group o-checkboxGroup">
+                            <input class="o-check"type="checkbox" name="remember" id="remember" value="1">
+                            <label class="o-rememberLabel o-formFont">Recordar mis datos</label>
+                        </div><!--Cierre contenedor "recordar mis datos"-->                           
+                </div><!--Acaba contenido de la card-->
+                
+            </div> <!--Cierra contenedor de la card-->
+        </div> <!--Cierra contenedor del contenido de la pagina-->
+    <!--links de bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
